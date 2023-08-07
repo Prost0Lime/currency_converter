@@ -23,7 +23,7 @@ def currency_converter(request):
     from_currency = from_currency.upper()
     to_currency = to_currency.upper()
 
-    # Обновление курсов валют из ЦБР
+    # Обновление курсов валют из ЦБ РФ
     response = requests.get('http://www.cbr.ru/scripts/XML_daily.asp')
     if response.status_code == 200:
         xml_data = response.content
